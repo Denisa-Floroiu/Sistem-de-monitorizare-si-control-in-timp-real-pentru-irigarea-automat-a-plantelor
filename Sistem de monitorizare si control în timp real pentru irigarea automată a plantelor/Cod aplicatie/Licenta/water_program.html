@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LICENTA</title>
+<script src="jquery-3.7.0.min.js"></script>
+<script src="water_program.js"></script>
+<link rel="stylesheet" href="main.css" >
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+h1 {
+    color: #333;
+}
+
+.header {
+  padding: 1px;
+  text-align: left;
+  background:#7fb3a1;
+  color: white;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-family: 'Lucida Handwriting';
+
+}
+
+.bara-de-navigare  {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+.bara-de-navigare  a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.bara-de-navigare  a.right {
+  float: right;
+}
+
+.bara-de-navigare  a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.bara-de-navigare  a.active {
+  background-color: #666;
+  color: white;
+}
+.main{
+  font-family: 'Impact ';
+   min-width: 500px; 
+  min-height: 300px; 
+
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .bara-de-navigare  a {
+    float: none;
+    width: 100%;
+  }
+}
+.buttonload {
+  background-color: #5da16f; 
+  border: none; 
+  color: white; 
+  padding: 12px 24px; 
+  font-size: 16px;
+  position: fixed;
+  left: 7%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: 9999;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+@media (max-width: 600px) {
+  .buttonload {
+    left: 10px;
+    right: 5px;
+    bottom: 5px;
+    transform: none;
+  }
+}
+.buttonload:hover {
+  background-color: #036349; 
+  cursor: pointer; 
+}
+.buttonload1 {
+  
+  padding: 12px 24px; 
+  font-size: 16px;
+  position: fixed;
+  left: 55%;
+  bottom: 20px;
+  transform: translateX(-50%);
+ 
+
+}
+.buttonload1:hover {
+  background-color: #036349; 
+  cursor: pointer; 
+}
+.fa {
+  margin-left: -12px;
+  margin-right: 8px;
+}
+
+</style>
+</head>
+<body>
+  <!-- Antetul care prezinta  numele aplicatiei cat si o imagine reprezentativa cu floarea-->
+<div class="header">
+  <h1><img src="image/sigla.png"  style="width:65px; height: 65px;"><b>MyKalanchoe<b></h1> 
+</div>
+ <!--Prezentare de imagini -->
+ <div class="container">
+    <div id="Slideshow" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#Slideshow" data-slide-to="0" class="active"></li>
+        <li data-target="#Slideshow" data-slide-to="1"></li>
+        <li data-target="#Slideshow" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="image/img2.png"  style="width:30%; height: 200px;">
+        </div>
+        <div class="item">
+          <img src="image/img1.png"  style="width:30%; height: 200px;">
+        </div>
+        <div class="item">
+          <img src="image/img3.jpg"  style="width:30%;height: 200px;">
+        </div>
+      </div>
+      <a class="left carousel-control" href="#Slideshow" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#Slideshow" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+ <!-- Bara de navigare--> 
+<div class="bara-de-navigare ">
+  <a href="home_user.html" class="active"><i class="fa fa-home"></i> Home</a>
+  <a href="table_view.html"><img src="image/grafic.png">Grafice</a>
+  <a href="water_program.html"><img src="image/settings.png" >Configurare program udare</a>
+  <a href="feedback_user.html"> <i class="fa fa-comment"></i>Feedback </a>
+  <a href="index.html" class="right" ><i class="glyphicon glyphicon-log-out"></i>Deconectare</a>
+</div>
+
+ <!-- Selectare program de udare--> 
+<div class="main" style="display: flex; flex-direction: column; ">
+     <div style="text-align: center;">
+      <label for="udare">Selectează programul</label>
+      <select name="udare" class="selecttipudare" id="selecttipudare">
+         <option value="op1">Udare periodică</option>
+         <option value="op2">Udare automată</option>
+         <option value="op3">Udare manuală</option>
+      </select>
+   </div>
+   <div id="udareperiodica" style="display: flex; flex-direction: column; align-items: center;">
+      <div>
+         <label for="selectadata">Selectează data de udare</label>
+         <input type="date" id="dateSelectate">
+      </div>
+      <div>
+         <label for="periodic">Udare la un interval de timp</label>
+         <input type="checkbox" id="checkperioada">
+      </div>
+      <div class="hidden" id="perioada">
+         <label for="udare1">Selectează intervalul la care este udată floarea</label>
+         <select name="udare1" id="selectperioada">
+            <option value="1day">La o zi</option>
+            <option value="3day">La trei zile</option>
+            <option value="7day">La șapte zile</option>
+         </select>
+      </div>
+   </div>
+   
+ <!-- Afisare date venite de la senzori--> 
+   <div id="udaresenzori"></div>
+   
+   <div style="display: flex; flex-direction: column; align-items: flex-start;">
+      <div style="text-align: left;">
+         <div id="value1" style="display: flex; flex-direction: column;">
+            <div>
+               <img style="width:40px ; height: 40px;" id="wet1" src="image/water.png"/>
+               <img style="width:40px ; height: 40px;" id="dry1" src="image/blood.png"/>
+               <span id="sol"></span>
+            </div>
+            <div>
+               <img style="width:40px ; height: 40px;" id="wet" src="image/water.png"/>
+               <img style="width:40px ; height: 40px;" id="dry" src="image/blood.png"/>
+               <img style="width:40px ; height: 40px;" id="middle" src="image/liquid-drop.png"/>
+               <span id="plant1"></span>
+            </div>
+            <div>
+               <img style="width:40px ; height: 40px;" id="wet2" src="image/high-temperature.png"/>
+               <img style="width:40px ; height: 40px;" id="dry2" src="image/low-temperature.png"/>
+               <img style="width:40px ; height: 40px;" id="middle2" src="image/temperature.png"/>
+               <span id="temp1"></span>
+            </div>
+             <div>
+               <img style="width:40px ; height: 40px;" id="level1" src="image/water-level.png"/>
+               <img style="width:40px ; height: 40px;" id="level2" src="image/water-level1.png"/>
+               <span id="nivel"></span>
+            </div>
+         </div>
+      </div>
+   
+      <div class="hidden" id="udaremanuala"  style=" position: absolute;top: 400px;right: 700px;">
+         <label class="switch" >
+            <input type="checkbox" id="stare"></input>
+            <span class="slider round"></span>
+         </label>
+         <span id="statuspompa"></span>
+      </div>
+   
+      <button class="buttonload1 " id="btnload1"  align-items: center;>
+         <b>Încarcă programul</b><br>
+         <img src="image/watering.png" alt="Imaginea butonului" />
+      </button>
+      <button class="buttonload1 hidden" id="btnload2" align-items: center;>
+         <b>Încarcă programul 1</b><br>
+         <img src="image/watering.png" alt="Imaginea butonului" />
+      </button>
+   </div>
+</div>
+</body>
+</html>
